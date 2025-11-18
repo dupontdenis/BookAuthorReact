@@ -24,6 +24,19 @@ npm install
 npm run dev
 ```
 
+### 3. Populate the Database
+
+After starting the API server, you can seed the database with a sample book and author:
+
+```bash
+node populate.js
+```
+
+This will flush both collections and add:
+
+- Book: `expressJs`
+- Author: `SuperDupont`
+
 ### Useful Tips
 
 - The backend runs on Node.js and exposes REST endpoints for authors and books.

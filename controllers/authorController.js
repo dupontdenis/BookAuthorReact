@@ -33,3 +33,9 @@ export async function deleteAuthor(req, res) {
   await Author.findByIdAndDelete(req.params.id);
   res.status(204).end();
 }
+
+// Remove all authors from the database
+export async function deleteAllAuthors(req, res) {
+  await Author.deleteMany({});
+  res.status(204).end();
+}

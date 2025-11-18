@@ -31,3 +31,8 @@ export async function deleteBook(req, res) {
   await Book.findByIdAndDelete(req.params.id);
   res.status(204).end();
 }
+
+export async function deleteAllBooks(req, res) {
+  await Book.deleteMany({});
+  res.status(204).end();
+}
