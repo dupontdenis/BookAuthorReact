@@ -1,6 +1,10 @@
 const BASE = "http://localhost:3000";
 
 async function request(path, options = {}) {
+  // Simulate slow database by adding an artificial delay (ms)
+  const SIMULATED_DELAY_MS = 1500;
+  await new Promise((r) => setTimeout(r, SIMULATED_DELAY_MS));
+
   const res = await fetch(BASE + path, {
     headers: { "Content-Type": "application/json" },
     ...options,
